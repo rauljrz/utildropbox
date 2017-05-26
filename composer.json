@@ -1,0 +1,8 @@
+{
+	"name": "rauljrz/utildropbox",
+	"description": "A simple class to handle the DropBox APIs.",
+    "require": {
+    	"rauljrz/utildropbox": "master",
+        "kunalvarma05/dropbox-php-sdk": "^0.2.0"
+    }
+}
