@@ -1,8 +1,15 @@
 {
-	"name": "rauljrz/utildropbox",
-	"description": "A simple class to handle the DropBox APIs.",
+    "name": "rauljrz/utildropbox",
+    "description": "A Simple Class to handle the DropBox API's.",
+    "type": "library",
     "require": {
-    	"rauljrz/utildropbox": "master",
         "kunalvarma05/dropbox-php-sdk": "^0.2.0"
-    }
+    },
+    "license": "The Beer-Ware License (Revision 42)",
+    "authors": [
+        {
+            "name": "rauljrz",
+            "email": "raul.jrz@gmail.com"
+        }
+    ]
 }
