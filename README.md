@@ -14,7 +14,7 @@ composer requiere rauljrz/utildropbox
 
 Get Started
 -----------
-
+``` PHP
 require "vendor/autoload.php";
 $oo = new utilDBx();
 
@@ -26,7 +26,7 @@ if ($aResult['status']=='SUCCESS') {
 	echo 'upload ERROR: '.$aResult['message'];
 }
 
-
+```
 En el ejemplo se supone que se hace uso de composer 
 
 
@@ -117,10 +117,9 @@ En el ejemplo se supone que se hace uso de composer
      */
 
 ## License
- ----------------------------------------------------------------------------
- "THE BEER-WARE LICENSE" (Revision 42):
+ 
+  "THE BEER-WARE LICENSE" (Revision 42):
  <phk@FreeBSD.ORG> wrote this file. As long as you retain this notice you
  can do whatever you want with this stuff. If we meet some day, and you think
  this stuff is worth it, you can buy me a beer in return Poul-Henning Kamp
- ----------------------------------------------------------------------------
-
+ 
