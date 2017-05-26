@@ -9,7 +9,7 @@ Installation
 ------------
 The preferred way to install this library is to rely on Composer:
 
-composer requiere rauljrz/utildropbox
+composer require rauljrz/utildropbox
 
 
 Get Started

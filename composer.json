@@ -2,6 +2,8 @@
     "name": "rauljrz/utildropbox",
     "description": "A Simple Class to handle the DropBox API's.",
     "type": "library",
+    "version": "1.0.0",
+    "keywords": ["DropBox","API","upload","download"],
     "require": {
         "kunalvarma05/dropbox-php-sdk": "^0.2.0"
     },
@@ -9,7 +11,8 @@
     "authors": [
         {
             "name": "rauljrz",
-            "email": "raul.jrz@gmail.com"
+            "email": "raul.jrz@gmail.com",
+            "homepage": "http://rauljrz.github.io"
         }
     ]
 }
