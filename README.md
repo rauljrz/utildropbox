@@ -1,37 +1,135 @@
-## Welcome to GitHub Pages
+{
+    "require": {
+        "kunalvarma05/dropbox-php-sdk": "^0.2.0"
+    }
+}
 
-You can use the [editor on GitHub](https://github.com/rauljrz/utildropbox/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+utilDropBox v1
+================
+Este Clase me hace la vida mas facil al acceder a los recursos de DropBox.
+Hago uso de la clase provista por SDK de DropBox. 
+Dropbox SDK v2 for PHP (https://github.com/kunalvarma05/dropbox-php-sdk)
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Installation
+------------
+The preferred way to install this library is to rely on Composer:
 
-```markdown
-Syntax highlighted code block
+composer requiere rauljrz/utildropbox
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+Get Started
+-----------
 
-1. Numbered
-2. List
+require "vendor/autoload.php";
+$oo = new utilDBx();
 
-**Bold** and _Italic_ and `Code` text
+$aResult = $oo->upload('c:\mis documentos\archivoholamundo.doc', '/archivoholamundo.doc');
 
-[Link](url) and ![Image](src)
-```
+if ($aResult['status']=='SUCCESS') {
+	echo 'upload OK';
+} else {
+	echo 'upload ERROR: '.$aResult['message'];
+}
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+En el ejemplo se supone que se hace uso de composer 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rauljrz/utildropbox/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+## Docu
+    /**
+	 * searchFile($cFileName, $cPath )
+     * ==============================
+     * 
+     * Realiza la busqueda de un archivo a partir del path que se le indica. Si no path, lo hace desde raiz
+     * @param     string                   $cFileName Es el nombre del archivo a buscar
+     * @param     string                   $cPath     Es la ruta en donde se buscara el archivo, si no se lo pasa, toma la raiz
+     * @return    array                               Array con los datos de los archivos encontrado.
+     *            El array resultante tiene la siguiente forma:
+     *                status:     Posibles valores: SUCCESS o ERROR
+     *                message:    Mensaje devuelto por la clase hasta 50 caracteres
+     *                data:       Valor extra/anexos.
+     */
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    /**
+     * delete($cFileName)
+     * ==================
+     * 
+     * Metodo para Eliminar un archivo o carpeta
+     * @param     varchar         $cFileName Nombre con el Path del archivo a borrar
+     * @return    array                      Array con los datos de los archivos encontrado.
+     *            El array resultante tiene la siguiente forma:
+     *                status:     Posibles valores: SUCCESS o ERROR
+     *                message:    Mensaje devuelto por la clase hasta 50 caracteres
+     *                data:       Valor extra/anexos.
+     */
+    
+     /**
+     * copy($cFileOrigen, $cFileDestino)
+     * =================================
+     * 
+     * Metodo para Copiar archivos dentro del DropBox
+     * Metodo para Copiar archivos dentro del DropBox
+     * @param     varchar         $cFileOrigen  Path+Nombre del Archivo a Copiar
+     * @param     varchar         $cFileDestino Path+Nombre del Archivo resultante
+     * @return    array                         Array con los datos de los archivos encontrado.
+     *            El array resultante tiene la siguiente forma:
+     *                status:     Posibles valores: SUCCESS o ERROR
+     *                message:    Mensaje devuelto por la clase hasta 50 caracteres
+     *                data:       Valor extra/anexos.
+     */
+    
+     /**
+     * move($cFileOrigen, $cFileDestino)
+     * ================================
+     * 
+     * Metodo para Mover archivos dentro de DropBox
+     * @param     varchar         $cFileOrigen  Path+Nombre del Archivo a ser Movido
+     * @param     varchar         $cFileDestino Path+Nombre del Archivo resultante
+     * @return    array                         Array con los datos de los archivos encontrado.
+     *            El array resultante tiene la siguiente forma:
+     *                status:     Posibles valores: SUCCESS o ERROR
+     *                message:    Mensaje devuelto por la clase hasta 50 caracteres
+     *                data:       Valor extra/anexos.
+     */
+    
+
+     /**
+     * download($cFileOrigen, $cFileDestino)
+     * =====================================
+     * 
+     * Metodo para realizar Descargar de Archivos de DropBox
+     * @param     varchar         $cFileOrigen  Path+Nombre del Archivo en DropBox
+     * @param     varchar         $cFileDestino Path+Nombre del Archivo en carpeta Local
+     * @return    array                         Array con los datos de los archivos encontrado.
+     *            El array resultante tiene la siguiente forma:
+     *                status:     Posibles valores: SUCCESS o ERROR
+     *                message:    Mensaje devuelto por la clase hasta 50 caracteres
+     *                data:       Valor extra/anexos.
+     */
+    
+     /**
+     * upload($cFileOrigen, $cFileDestino)
+     * ==================================
+     * 
+     * Metodo para realizar la Subida de Archivos a DropBox
+     * @param     varchar         $cFileOrigen  Path+Nombre del Archivo en la pc Local
+     * @param     varchar         $cFileDestino Path+Nombre del Archivo en DropBox
+     * @return    array                         Array con los datos de los archivos encontrado.
+     *            El array resultante tiene la siguiente forma:
+     *                status:     Posibles valores: SUCCESS o ERROR
+     *                message:    Mensaje devuelto por la clase hasta 50 caracteres
+     *                data:       Valor extra/anexos.
+     */
+
+## License
+/*
+ * ----------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <phk@FreeBSD.ORG> wrote this file. As long as you retain this notice you
+ * can do whatever you want with this stuff. If we meet some day, and you think
+ * this stuff is worth it, you can buy me a beer in return Poul-Henning Kamp
+ * ----------------------------------------------------------------------------
+ */
+
