@@ -2,7 +2,7 @@
     "name": "rauljrz/utildropbox",
     "description": "A Simple Class to handle the DropBox API's.",
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.1.1-RC",
     "keywords": ["DropBox","API","upload","download"],
     "require": {
         "kunalvarma05/dropbox-php-sdk": "^0.2.0"
