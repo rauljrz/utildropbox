@@ -1,5 +1,5 @@
-utilDropBox v1
-================
+utilDropBox 
+=============
 Este Clase me hace la vida mas facil al acceder a los recursos de DropBox.
 Hago uso de la clase provista por SDK de DropBox. 
 Dropbox SDK v2 for PHP (https://github.com/kunalvarma05/dropbox-php-sdk)
